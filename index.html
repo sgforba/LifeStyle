@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
 <link href='styles/reset.css' rel='stylesheet' type='text/css'>
 <link href='styles/main.css' rel='stylesheet' type='text/css'>
 
@@ -44,11 +45,19 @@
 			<div class="image-gallery-overlay-left">
 				<img class="arrow" src="images/left-arrow.png">
 			</div>
-			<ul class="slider">
-				<li class="slider-item"><img src="images/p1.jpg" border="0"></li>
-				<li class="slider-item"><img src="images/p2.jpg" border="0"></li>
-				<li class="slider-item"><img src="images/p3.jpg" border="0"></li>
-			</ul>
+			<div class="slider-viewport">
+				<div class="slider">
+					<div class="slider-item">
+						<img src="images/p1.jpg">
+					</div>
+					<div class="slider-item">
+						<img src="images/p2.jpg">
+					</div>
+					<div class="slider-item">
+						<img src="images/p3.jpg">
+					</div>										
+				</div>												
+			</div>	
 			<div class="image-gallery-overlay-right">
 				<img class="arrow" src="images/right-arrow.png">
 			</div>		
@@ -64,8 +73,28 @@
 			<div class="insta-gallery-left-arrow">
 				<img class="arrow" src="images/left-arrow.png">
 			</div>
-			<ul class="insta-slider">
-			</ul>	
+				<div class="insta-slider-viewport">
+					<div class="insta-slider">
+						<div class="insta-slide">
+							<img src="images/insta1.jpg">
+						</div>
+						<div class="insta-slide">
+							<img src="images/insta2.jpg">
+						</div>
+						<div class="insta-slide">
+							<img src="images/insta3.jpg">
+						</div>
+						<div class="insta-slide">
+							<img src="images/insta4.jpg">
+						</div>	
+						<div class="insta-slide">
+							<img src="images/insta5.jpg">
+						</div>
+						<div class="insta-slide">
+							<img src="images/insta6.jpg">
+						</div>																					
+					</div>												
+				</div>		
 			<div class="insta-gallery-right-arrow">
 				<img class="arrow" src="images/right-arrow.png">
 			</div>						
@@ -81,7 +110,6 @@
 					<p class="recent-post-title">Exploring San Francisco’s Cuisine</p>
 					<p class="recent-post-byline">By: <span>Jhone Doe</span> September 11 2015.</p>
 					<p class="recent-post-content">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
-				</div>	
 				<div class="recent-post-button">CONTINUE READING</div>
 				<ul class="recent-post-social">
 					<li class="rec-soc-item"><a href=""><img src="images/icon-blog.png"></a></li>
@@ -90,6 +118,7 @@
 					<li class="rec-soc-item"><a href=""><img src="images/icon-gplus.png"></a></li>
 					<li class="rec-soc-item"><a href=""><img src="images/icon-fb.png"></a></li>
 				</ul>					
+				</div>						
 			</div>
 			<div class="secondary-posts-container">
 				<div class="secondary-post">
@@ -101,17 +130,17 @@
 						<p class="secondary-post-title">Exploring San Francisco’s Cuisine</p>
 						<p class="secondary-post-byline">By: <span>Jhone Doe</span> September 11 2015.</p>
 						<p class="secondary-post-content">This is Photoshop's versioni  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem  torquent conubia nostra.</p>
-					</div>
-					<div class="secondary-post-button">
-						<a href="" target="_blank">READ MORE</a>
-					</div>
-				<ul class="secondary-post-social">
-					<li class="sec-soc-item"><a href=""><img src="images/icon-blog.png"></a></li>
-					<li class="sec-soc-item"><a href=""><img src="images/icon-tw.png"></a></li>
-					<li class="sec-soc-item"><a href=""><img src="images/icon-t.png"></a></li>
-					<li class="sec-soc-item"><a href=""><img src="images/icon-gplus.png"></a></li>
-					<li class="sec-soc-item"><a href=""><img src="images/icon-fb.png"></a></li>
-				</ul>						
+						<div class="secondary-post-button">
+							<a href="" target="_blank">READ MORE</a>
+						</div>
+						<ul class="secondary-post-social">
+							<li class="sec-soc-item"><a href=""><img src="images/icon-tw.png"></a></li>
+							<li class="sec-soc-item"><a href=""><img src="images/icon-t.png"></a></li>
+							<li class="sec-soc-item"><a href=""><img src="images/icon-gplus.png"></a></li>
+							<li class="sec-soc-item"><a href=""><img src="images/icon-fb.png"></a></li>
+							<li class="sec-soc-item"><a href=""><img src="images/icon-blog.png"></a></li>
+						</ul>						
+					</div>						
 				</div>
 				<div class="secondary-post">
 					<div class="secondary-post-image-container">
@@ -122,18 +151,18 @@
 						<p class="secondary-post-title">Exploring San Francisco’s Cuisine</p>
 						<p class="secondary-post-byline">By: <span>Jhone Doe</span> September 11 2015.</p>
 						<p class="secondary-post-content">This is Photoshop's versioni  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem  torquent conubia nostra.</p>
-					</div>
-					<div class="secondary-post-button">
-						<a href="" target="_blank">READ MORE</a>
-					</div>
-					<ul class="secondary-post-social">
-						<li class="sec-soc-item"><a href=""><img src="images/icon-blog.png"></a></li>
-						<li class="sec-soc-item"><a href=""><img src="images/icon-tw.png"></a></li>
-						<li class="sec-soc-item"><a href=""><img src="images/icon-t.png"></a></li>
-						<li class="sec-soc-item"><a href=""><img src="images/icon-gplus.png"></a></li>
-						<li class="sec-soc-item"><a href=""><img src="images/icon-fb.png"></a></li>
-					</ul>						
-				</div>						
+						<div class="secondary-post-button">
+							<a href="" target="_blank">READ MORE</a>
+						</div>
+						<ul class="secondary-post-social">
+							<li class="sec-soc-item"><a href=""><img src="images/icon-tw.png"></a></li>
+							<li class="sec-soc-item"><a href=""><img src="images/icon-t.png"></a></li>
+							<li class="sec-soc-item"><a href=""><img src="images/icon-gplus.png"></a></li>
+							<li class="sec-soc-item"><a href=""><img src="images/icon-fb.png"></a></li>
+							<li class="sec-soc-item"><a href=""><img src="images/icon-blog.png"></a></li>
+						</ul>						
+					</div>						
+				</div>					
 			</div>
 			<div class="other-posts-container">
 				<div class="other-post">

@@ -6,7 +6,7 @@ body {
 	background-color: #f7f7f7;
 }
 .content-container {
-	max-width: 1170px;
+	width: 1170px;
 	margin: 0 auto;
 }
 
@@ -29,7 +29,7 @@ body {
 	border-bottom: 1px solid #cecece;
 }
 .header-content {
-	max-width: 1170px;
+	width: 1170px;
 	height: 50px;
 	margin: 0 auto;
 }
@@ -94,33 +94,51 @@ body {
 	background-color: #ff9b9b;
 	border: 1px solid #ff9b9b;
 	position: relative;
-}
-.image-gallery {
 	display: inline-block;
+}
+
+.slider-viewport {
+	width: 100%;
+	overflow: hidden;
+}
+
+.slider {
+	width: 500%;
 	position: relative;
 }
+.slider-item {
+	position: relative;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	display: inline;
+}
 .image-gallery-overlay-left {
+	display: inline-block;
 	position: absolute;
 	top: 0;
 	left:0;
+	z-index: 1;
 	height: 100%;
 	width: 100px;
-	background-color: rgba(0,0,0,0.5)
+	background-color: rgba(0,0,0,0.3)
 }
 
 .image-gallery-overlay-right {
+	display: inline-block;
 	position: absolute;
 	top: 0;
 	right:0;
 	height: 100%;
-	width: 100px;
-	background-color: rgba(0,0,0,0.5)
+	width: 100px;	
+	background-color: rgba(0,0,0,0.3);
 }
 
 .arrow {
+	position: absolute;
+	top: 50%;
 	height: 35px;
 	width: 23px;
-	text-align: center;
 }
 
 .gallery-button-container {
@@ -156,29 +174,38 @@ body {
 	background-color: #424242;
 }
 .insta-slider {
+	width: 100%;
+	height: 203px;
+	position: absolute;
 	display: inline-block;
-	max-width: 1098px;
+	width: 1098px;
 	overflow: hidden;
 }
-.insta-slider-item {
-	display: inline-block;
+.insta-slider-viewport {
+	width: 100%;
+	overflow: hidden;
+}	
+
+.insta-slider {
+	width: 500%;
+	position: relative;
+	
+}
+.insta-slide {
+	float: left;
 	padding: 0px;
 	margin: 0px;
+	display: inline;
+	width: 293px;
+	height: 203px;
 }
-.insta-slider-item img {
-	height: 202px;
-	width: 257px;
-	padding: 0px;
-	margin: 0px;	
-}
-.insta-slider-item:first-child {
-	margin-left: 37px;
-}
+
 .insta-gallery-left-arrow {
 	display: inline-block;
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 1;
 	width: 37px;
 	height: 100%;
 	line-height: 203px;
@@ -202,8 +229,11 @@ body {
 /* RECENT POSTS*/
 .recent-post {
 	width: 870px;
+	margin-bottom: 30px;
 }
 .recent-post-section-title {
+	background-color: #f7f7f7;
+	margin-bottom: 30px;
 	text-transform: uppercase;
 	font-size: 22px;
 	color: #313131;
@@ -217,7 +247,6 @@ body {
 	width: 870px;
 	height: 371px;
 	background-color: #424242;
-	margin-top: 30px;
 	position: relative;
 	border: 1px solid black;
 
@@ -229,7 +258,7 @@ body {
 	left:0;
 }
 .recent-post-copy {
-	padding-top: 40px;
+	padding: 40px 30px 0px 30px;
 	background-color: #ffffff;
 }
 .recent-post-title {
@@ -248,6 +277,9 @@ body {
 	margin-bottom: 30px;
 }
 
+.recent-post-content {
+	padding-bottom: 40px;
+}
 .recent-post-button {
 	background-color: #ffffff;
 	float: left;
@@ -260,7 +292,6 @@ body {
 	font-family: Raleway SemiBold, Arial, verdana, sans-serif;
 	text-transform: uppercase;
 	background-color: #ffb79b;
-	margin-top: 30px;
 }
 
 .recent-post-social {
@@ -278,7 +309,6 @@ body {
 .secondary-posts-container{
 	width: 870px;
 	overflow: auto;
-	margin-top: 70px;
 	margin-bottom: 30px;
 	
 }
@@ -313,7 +343,7 @@ body {
 .secondary-post-copy{
 	color: #424242;
 	font-family: Raleway SemiBold, Arial, verdana, sans-serif;
-	margin-bottom: 30px;
+	padding: 0px 30px 0px 30px;
 }
 .secondary-post-title {
 	text-transform: uppercase;
@@ -327,6 +357,10 @@ body {
 	margin-bottom: 30px;
 }
 
+.secondary-post-content {
+	padding-bottom: 30px;
+}
+
 .secondary-post-button {
 	float: left;
 	width: 120px;
@@ -334,22 +368,31 @@ body {
 	text-align: center;
 	line-height: 40px;
 	border: 1px solid grey;
+	clear: right;
 }
 
 .secondary-post-button a {
+	display: block;
+	color: #424242;
+	font-family: Raleway SemiBold, Arial, verdana, sans-serif;	
 	text-decoration: none;
+	font-size: 12px;
 }
 
 .secondary-post-social {
-	float: right;
+	height: 40px;
 	padding-bottom: 40px;
 }
 
+.secondary-post-social:first-child {
+	margin-left: 60px;
+}
 .sec-soc-item {
 	height: 40px;
-	line-height: 40px;	
+	width: 40px;
+	line-height: 40px;
+	text-align: center;	
 	display: inline-block;
-	margin-right: 30px;
 }
 
 .other-posts-container {
