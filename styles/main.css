@@ -1,3 +1,54 @@
+.arrow {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: 35px;
+	height: 23px;
+}
+.cta>* {
+	display: block;
+	color:#ffb79b;
+	webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out; /* IE10 is actually unprefixed */
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.cta {
+	webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out; /* IE10 is actually unprefixed */
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.cta:hover {
+	font-size: 13px;
+	background-color: #ffffff;
+	color:#ffb79b;
+	border: 2px solid #ffb79b;
+}
+.cta>*:hover {
+	color:#ffb79b;
+}
+.social{ display:inline-block; text-indent: 100%; white-space: nowrap; overflow: hidden; vertical-align: middle; cursor: pointer; 
+	transition: background 0.2s ease-out;	
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out; /* IE10 is actually unprefixed */
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;}
+
+.blog { background: url('../images/icon-blog.png'); width: 12px; height: 12px;}
+.twitter { background: url('../images/icon-tw.png'); width: 13px; height:12px;}
+.tumblr { background: url('../images/icon-tumblr.png'); width: 8px; height:15px;}
+.gplus { background: url('../images/icon-gplus.png'); width: 13px; height:15px;}
+.facebook { background: url('../images/icon-fb.png'); width: 8px; height:15px;}
+
+.blog:hover { background: url('../images/icon-blog-hover.png');}
+.twitter:hover { background: url('../images/icon-tw-hover.png');}
+.tumblr:hover { background: url('../images/icon-tumblr-hover.png');}
+.gplus:hover { background: url('../images/icon-gplus-hover.png');}
+.facebook:hover { background: url('../images/icon-fb-hover.png');}
+
 body {
 	background-color:#f7f7f7;
 }
@@ -68,7 +119,9 @@ body {
 	text-transform: uppercase;
 	
 }
-
+.nav-bar-item >*:hover {
+	color: #ffb79b;
+}
 .social-bar {
 	height: 100%;
 	line-height: 50px;	
@@ -76,6 +129,7 @@ body {
 .soc-bar-item {
 	display: inline-block;
 	margin-right: 20px;
+	line-height: 50px;
 }	
 /* LOGO SECTION */
 .logo {
@@ -114,6 +168,7 @@ body {
 	display: inline;
 }
 .image-gallery-overlay-left {
+	cursor: pointer;
 	display: inline-block;
 	position: absolute;
 	top: 0;
@@ -121,24 +176,34 @@ body {
 	z-index: 1;
 	height: 100%;
 	width: 100px;
-	background-color: rgba(0,0,0,0.3)
+	background-color: rgba(0,0,0,0.1);
+	transition: background-color 0.2s;
+}
+.image-gallery-overlay-left img {
+	left: 33%;
+}
+.image-gallery-overlay-left:hover {
+	background-color: rgba(0,0,0,0.2);
 }
 
 .image-gallery-overlay-right {
+	cursor: pointer;
 	display: inline-block;
 	position: absolute;
 	top: 0;
 	right:0;
 	height: 100%;
 	width: 100px;	
-	background-color: rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0.1);
+	transition: background-color 0.2s;
 }
 
-.arrow {
-	position: absolute;
-	top: 50%;
-	height: 35px;
-	width: 23px;
+.image-gallery-overlay-right img {
+	right: 33%;
+}
+
+.image-gallery-overlay-right:hover {
+	background-color: rgba(0,0,0,0.2);
 }
 
 .gallery-button-container {
@@ -260,6 +325,7 @@ body {
 .recent-post-copy {
 	padding: 40px 30px 0px 30px;
 	background-color: #ffffff;
+	overflow: auto;
 }
 .recent-post-title {
 	background-color: #ffffff;
@@ -292,18 +358,23 @@ body {
 	font-family: Raleway SemiBold, Arial, verdana, sans-serif;
 	text-transform: uppercase;
 	background-color: #ffb79b;
+	margin-bottom: 40px;
 }
 
 .recent-post-social {
+	display: inline;
 	background-color: #ffffff;
 	margin-top: 30px;
-	margin-left: 440px;
+	margin-left: 400px;
+
 
 }
 
 .rec-soc-item{
 	display: inline-block;
 	margin-right: 30px;
+	max-width: 15px;
+	max-height: 13px;	
 }
 
 .secondary-posts-container{
@@ -362,9 +433,11 @@ body {
 }
 
 .secondary-post-button {
+	display: inline-block;
 	float: left;
 	width: 120px;
 	height: 40px;
+	margin-bottom: 20px;
 	text-align: center;
 	line-height: 40px;
 	border: 1px solid grey;
@@ -380,21 +453,20 @@ body {
 }
 
 .secondary-post-social {
-	height: 40px;
-	padding-bottom: 40px;
+	float: right;
+	display: inline-block;
+	margin-left: 35px;
 }
 
-.secondary-post-social:first-child {
-	margin-left: 60px;
-}
 .sec-soc-item {
-	height: 40px;
-	width: 40px;
+	margin-right: 25px;
 	line-height: 40px;
 	text-align: center;	
 	display: inline-block;
 }
-
+.sec-soc-item:last-child {
+	margin-right: 0px;
+}
 .other-posts-container {
 	clear: left;
 	width: 870px;
